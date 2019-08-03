@@ -1,1 +1,1 @@
-include Modules.app, Modules.core
+include Modules.app, Modules.core, Modules.mediaBrowser, Modules.widget

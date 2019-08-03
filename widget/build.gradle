@@ -2,8 +2,6 @@ apply from: "$rootDir/common-android-library.gradle"
 apply plugin: "kotlin-kapt"
 
 dependencies {
-    implementation Libraries.lifecycleExtensions
-    kapt Libraries.lifecycleCompiler
     implementation Libraries.rxjava
     implementation Libraries.rxkotlin
     implementation SupportLibraries.design
@@ -11,3 +9,4 @@ dependencies {
     implementation SupportLibraries.recyclerview
     implementation Libraries.constraintLayout
 }
+

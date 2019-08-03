@@ -1,6 +1,6 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+apply plugin: "com.android.application"
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-android-extensions"
 
 apply from: "$project.rootDir/secretconfig.gradle"
 
@@ -15,7 +15,7 @@ android {
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
 
-        resConfig 'en'
+        resConfig "en"
     }
 
     buildTypes {
@@ -44,15 +44,14 @@ android {
         unitTests.returnDefaultValues = true
     }
 
-    dynamicFeatures = []
+    dynamicFeatures = [Modules.mediaBrowser]
 }
 
 dependencies {
     implementation Libraries.kotlin
-
     implementation SupportLibraries.design
     implementation SupportLibraries.appcompat
     implementation SupportLibraries.recyclerview
-
+    implementation Libraries.constraintLayout
     implementation Libraries.lifecycleExtensions
 }
